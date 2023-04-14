@@ -15,7 +15,7 @@ class Subcategory extends Model
 
     public function items(): HasMany
     {
-        return $this->hasMany(Item::class);
+        return $this->hasMany(Item::class, 'sub_categories_id');
     }
 
     public function category(): BelongsTo

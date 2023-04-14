@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class SubcategoryController extends Controller
 {
-    public function index(){
-        $subCategory = new Subcategory();
-        return view('subcategories')->with(['subcategories' => $subCategory->all()]);
+    public function show($subcategory_id){
+        $items = Subcategory::find($subcategory_id)->items->all();
+        return view('items')->with(['items' => $items]);
     }
 }

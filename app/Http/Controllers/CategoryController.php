@@ -7,8 +7,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    private Category $category;
+
+    public function __construct()
+    {
+        $this->category = new Category();
+    }
+
     public function index(){
-        $category = new Category();
-        return view('categories')->with(['categories' => $category->all()]);
+        return view('categories')->with(['categories' => $this->category->all()]);
+    }
+
+    public function show($category_id){
+        $subcategories = $this->category->find($category_id)->subcategories->all();
+        return view('subcategories')->with(['subcategories' => $subcategories]);
     }
 }
