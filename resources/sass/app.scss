@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+body{
+    /* Layout Properties */
+
+    top: 0px;
+    left: 0px;
+
+    /* UI Properties */
+
+    background: transparent url('http://localhost/images/applications_energy--power_header@2x.png') 0% 0% no-repeat;
+    opacity: 1;
+}
