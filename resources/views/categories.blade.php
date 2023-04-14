@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    oi
+    @foreach($categories as $category)
+        <a href="{{route('subcategories',$category->id)}}">{{$category->name}}</a>
+    @endforeach
 @endsection

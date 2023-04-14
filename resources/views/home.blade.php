@@ -17,11 +17,11 @@
                     ACESSE ABAIXO NOSSOS MATERIAIS ÚTEIS
                 </div>
                 <div>
-                    Catálogos e Flyers
+                    <a href="{{route('categories')}}">Catálogos e Flyers</a>
                     <br>
-                    IOMs
+                    <a href="{{route('categories')}}">IOMs</a>
                     <br>
-                    Quick Instalation
+                    <a href="{{route('categories')}}">Quick Instalation</a>
                 </div>
             </div>
             <div class="col">

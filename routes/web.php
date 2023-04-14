@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\SubcategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +21,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/categories', function () {
-    return view('categories');
-});
-
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/categories/{category_id}/subcategories', [SubcategoryController::class, 'index'])->name('subcategories');
+Route::get('/subcategories/{subcategory_id}/items', [ItemController::class, 'index'])->name('items');
 Route::post('/messages', [MessageController::class, 'store'])->name('create_message');
