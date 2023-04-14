@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('size');
-            $table->string('url');
+            $table->foreignId('sub_categories_id');
             $table->timestamps();
+            $table->foreign('sub_categories_id')->references('id')->on('sub_categories')->cascadeOnDelete();
         });
     }
 
@@ -25,6 +26,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::disableForeignKeyConstraints();
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropForeign(['sub_categories_id']);
+        });
         Schema::dropIfExists('items');
     }
 };
