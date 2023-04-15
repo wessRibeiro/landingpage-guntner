@@ -18,7 +18,7 @@ use App\Http\Controllers\SubcategoryController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
 Route::get('/categories/{category_id}/subcategories', [CategoryController::class, 'show'])->name('subcategories');

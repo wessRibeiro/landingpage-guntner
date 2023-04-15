@@ -16,11 +16,12 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body>
-    <div id="app">
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
+<body class="">
+    <main class="overflow-hidden">
+        @yield('content')
+        <div class="row position-absolute start-50 d-sm-none d-sm-none d-lg-block d-xl-block d-xxl-block" style="bottom:20px !important" >
+            <img src="http://localhost/images/grupo_44.svg" alt="">
+        </div>
+    </main>
 </body>
 </html>
