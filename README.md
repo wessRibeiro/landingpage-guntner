@@ -32,5 +32,5 @@ Acessar o admin de banco de dados para verificar as mensagens enviadas e salvas 
 
 para desligar os serviços
 ```sh
-bash up.sh
+bash down.sh
 ```
