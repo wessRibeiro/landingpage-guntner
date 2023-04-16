@@ -23,10 +23,10 @@ docker exec landingpage-guntner-app-1 php artisan migrate
 docker exec landingpage-guntner-app-1 php artisan db:seed
 ```
 
-Acesse
+Acesse o sistema
 [http://localhost:80](http://localhost:80)
 
-Acessar o admin de banco de dados
+Acessar o admin de banco de dados para verificar as mensagens enviadas e salvas (use as infos do .env)
 [http://localhost:8080](http://localhost:8080)
 
 
