@@ -30,3 +30,7 @@ Acessar o admin de banco de dados
 [http://localhost:8080](http://localhost:8080)
 
 
+para desligar os serviços
+```sh
+bash up.sh
+```
