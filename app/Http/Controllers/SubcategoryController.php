@@ -9,6 +9,10 @@ class SubcategoryController extends Controller
 {
     public function show($subcategory_id){
         $items = Subcategory::find($subcategory_id)->items->all();
-        return view('items')->with(['items' => $items]);
+        return view('items')->with([
+            'items' => $items,
+            'subCategoryName' => Subcategory::find($subcategory_id)->name,
+            'categoryName' => Subcategory::find($subcategory_id)->category->name
+        ]);
     }
 }

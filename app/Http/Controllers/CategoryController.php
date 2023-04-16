@@ -20,6 +20,6 @@ class CategoryController extends Controller
 
     public function show($category_id){
         $subcategories = $this->category->find($category_id)->subcategories->all();
-        return view('subcategories')->with(['subcategories' => $subcategories]);
+        return view('subcategories')->with(['subcategories' => $subcategories, 'categoryName' => $this->category->find($category_id)->name]);
     }
 }
