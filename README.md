@@ -1,4 +1,3 @@
-#para o backend
 
 Crie o Arquivo .env
 ```sh
