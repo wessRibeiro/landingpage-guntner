@@ -1,4 +1,5 @@
-
+# use o ambiente do github se não quiser usar sua própria maquinaÇ
+https://wessribeiro-vigilant-engine-xqqqqx6r4w36995.github.dev/
 Crie o Arquivo .env
 ```sh
 cp .env.example .env
